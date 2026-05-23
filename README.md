@@ -7,6 +7,14 @@ combinations, and generates a simple privacy score.
 
 The app does not request internet access. Analysis runs on the device.
 
+## Support
+
+If you want to support development, use the button below. They mirror the
+funding source defined in `.github/FUNDING.yml`.
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Support-FFDD00?logo=buy-me-a-coffee&logoColor=000000)](https://www.buymeacoffee.com/zororaka)
+[![PayPal](https://img.shields.io/badge/PayPal-Donate-00457C?logo=paypal&logoColor=ffffff)](https://paypal.me/RakaWidhiAntoro)
+
 ## Features
 
 - Scan installed apps and inspect declared Android permissions.

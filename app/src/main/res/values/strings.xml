@@ -1,0 +1,438 @@
+<resources>
+    <!-- App -->
+    <string name="app_name">Analyzer</string>
+    <string name="action_back">Back</string>
+    <string name="action_retry">Retry</string>
+    <string name="action_clear">Clear</string>
+    <string name="action_select_apk">Select APK</string>
+    <string name="action_choose_apk">Choose APK</string>
+    <string name="action_share">Share</string>
+    <string name="action_copy_report">Copy Report</string>
+    <string name="action_score_details">Score Details</string>
+    <string name="action_open_google_play">Open Pro on Google Play</string>
+    <string name="action_view_apk_details">View APK Details</string>
+    <string name="action_install_apk">Install APK</string>
+    <string name="clipboard_label_app_analysis">App analysis</string>
+    <string name="chooser_share_analysis">Share analysis</string>
+    <string name="toast_report_copied">Report copied to clipboard.</string>
+    <string name="toast_apk_file_unavailable">The APK file is no longer available. Select the APK again.</string>
+    <string name="toast_no_apk_installer">No installer app was found for this APK.</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_apps_apk">Apps/APK</string>
+    <string name="nav_settings">Setting</string>
+    <string name="title_privacy_score">Privacy Score</string>
+
+    <!-- Fallbacks and errors -->
+    <string name="unknown_package_name">unknown.package</string>
+    <string name="unknown_version">Unknown</string>
+    <string name="unknown_app_name">Unknown app</string>
+    <string name="error_scan_installed_apps">Unable to scan installed app.</string>
+    <string name="error_analyze_selected_apk">Unable to analyze the selected APK.</string>
+    <string name="error_invalid_apk_file">This file does not look like a valid Android APK.</string>
+    <string name="error_apk_manifest_unparsed">The APK manifest could not be parsed.</string>
+    <string name="error_apk_too_large">The APK is too large to analyze comfortably on this device.</string>
+    <string name="error_open_selected_apk">Unable to open the selected APK.</string>
+
+    <!-- Enums -->
+    <string name="permission_category_privacy">Privacy</string>
+    <string name="permission_category_device_access">Device Access</string>
+    <string name="permission_category_communication">Communication</string>
+    <string name="permission_category_storage">Storage</string>
+    <string name="permission_category_tracking">Tracking</string>
+    <string name="permission_category_background_access">Background Access</string>
+    <string name="permission_category_other">Other</string>
+
+    <string name="warning_level_low">Low</string>
+    <string name="warning_level_medium">Medium</string>
+    <string name="warning_level_high">High</string>
+    <string name="warning_level_critical">Critical</string>
+
+    <string name="risk_level_high">High Risk</string>
+    <string name="risk_level_medium">Medium Risk</string>
+    <string name="risk_level_safer">Safer</string>
+
+    <string name="sort_mode_lowest_score">Lowest score</string>
+    <string name="sort_mode_permission_count">Most permission</string>
+    <string name="sort_mode_app_name">App name</string>
+
+    <!-- Common UI -->
+    <string name="app_icon_content_description">%1$s icon</string>
+    <string name="app_icon_fallback_letter">A</string>
+    <string name="privacy_score_label">Privacy Score</string>
+    <string name="privacy_score_range_legend">0-30 High Risk  |  31-70 Medium Risk  |  71-100 Safer</string>
+    <string name="score_range_multiline">0-30 = High Risk\n31-70 = Medium Risk\n71-100 = Safer</string>
+    <string name="score_factor_bullet">- %1$s</string>
+    <string name="metadata_two_part_format">%1$s  |  %2$s</string>
+    <string name="version_permissions_summary">Version %1$s  |  %2$s</string>
+    <string name="apk_version_permissions_summary">v%1$s  |  %2$s</string>
+    <string name="app_version_summary">Version %1$s (%2$d)</string>
+
+    <plurals name="permissions_count">
+        <item quantity="one">%d permission</item>
+        <item quantity="other">%d permissions</item>
+    </plurals>
+    <plurals name="trackers_count">
+        <item quantity="one">%d tracker</item>
+        <item quantity="other">%d trackers</item>
+    </plurals>
+    <plurals name="requested_permissions_count">
+        <item quantity="one">%d requested permission</item>
+        <item quantity="other">%d requested permissions</item>
+    </plurals>
+    <plurals name="tracker_sdks_count">
+        <item quantity="one">%d tracker SDK</item>
+        <item quantity="other">%d tracker SDKs</item>
+    </plurals>
+    <plurals name="warning_signals_count">
+        <item quantity="one">%d warning signal</item>
+        <item quantity="other">%d warning signals</item>
+    </plurals>
+    <plurals name="score_factor_sensitive_permissions">
+        <item quantity="one">%d sensitive permission reduces the score.</item>
+        <item quantity="other">%d sensitive permissions reduce the score.</item>
+    </plurals>
+    <plurals name="score_factor_trackers">
+        <item quantity="one">%d tracker or analytics SDK detected.</item>
+        <item quantity="other">%d trackers or analytics SDKs detected.</item>
+    </plurals>
+
+    <!-- Home -->
+    <string name="home_title">App Analyzer</string>
+    <string name="home_stat_scanned">Scanned</string>
+    <string name="home_stat_high_risk">High Risk</string>
+    <string name="home_stat_medium">Medium</string>
+    <string name="home_stat_safer">Safer</string>
+    <string name="home_scan_apps">Scan App</string>
+    <string name="home_scan_apps_description">Check permission, tracker, and privacy score</string>
+
+    <!-- Apps -->
+    <string name="tab_apps">App</string>
+    <string name="tab_apk">APK</string>
+    <string name="apps_search_label">Search</string>
+    <string name="apps_filter_high_risk">High risk</string>
+    <string name="installed_apps_title">Installed App</string>
+    <string name="installed_apps_subtitle">Search, sort, and filter app by privacy risk.</string>
+    <string name="installed_apps_search_label">Search app or package name</string>
+    <string name="installed_apps_filter_high_risk_only">High risk only</string>
+    <string name="scan_failed_title">Scan failed</string>
+    <string name="loading_fast_scanning_installed_apps">Fast scanning installed app</string>
+    <string name="loading_refreshing_app_list">Refreshing app list</string>
+    <string name="empty_no_apps_match_view_title">No app match this view</string>
+    <string name="empty_no_apps_match_view_message">Adjust the search or filter, then scan again if needed.</string>
+    <string name="empty_no_apps_found_title">No app found</string>
+    <string name="empty_no_apps_found_message">Adjust search or filter</string>
+    <string name="tracker_scan_tap_hint">tap for tracker scan</string>
+    <string name="tracker_scan_running_short">tracker scan running</string>
+    <string name="select_apk_to_inspect">Select an APK to inspect</string>
+    <string name="loading_analyzing">Analyzing...</string>
+    <string name="analysis_failed_title">Analysis failed</string>
+
+    <!-- APK analyzer -->
+    <string name="apk_analyzer_title">APK Analyzer</string>
+    <string name="apk_analyzer_subtitle">Inspect an APK file locally before installation.</string>
+    <string name="apk_private_local_analysis_title">Private local analysis</string>
+    <string name="apk_private_local_analysis_message">The selected APK is copied to temporary app cache only long enough to parse its manifest and scan known tracker signature.</string>
+    <string name="tracker_scan_enabled">Deep tracker detection is enabled.</string>
+    <string name="tracker_scan_disabled">Deep tracker detection is disabled in Setting.</string>
+    <string name="loading_analyzing_apk">Analyzing APK</string>
+    <string name="apk_analysis_failed_title">APK analysis failed</string>
+
+    <!-- App details -->
+    <string name="privacy_summary_title">Privacy Summary</string>
+    <string name="analysis_summary_tracker_scan_running">tracker scan running</string>
+    <string name="analysis_summary_counts_format">%1$s, %2$s, %3$s.</string>
+    <string name="risk_analysis_title">Risk Analysis</string>
+    <string name="risk_analysis_subtitle">Suspicious combination and high impact behavior.</string>
+    <string name="no_risky_combinations_title">No risky combination detected</string>
+    <string name="no_risky_combinations_message">This does not guarantee the app is safe, but the manifest does not show common suspicious pattern.</string>
+    <string name="trackers_title">Tracker</string>
+    <string name="trackers_subtitle">Common analytics, ads, attribution, or messaging SDK signature.</string>
+    <string name="no_common_trackers_title">No common tracker detected</string>
+    <string name="no_common_trackers_message">The scanner did not find Firebase Analytics, AdMob, Facebook SDK, AppsFlyer, Adjust, or OneSignal signature.</string>
+    <string name="tracker_scan_running_title">Tracker scan is running</string>
+    <string name="tracker_scan_running_message">The app list open quickly first. Tracker detection runs when this detail page is opened and update the report when finished.</string>
+    <string name="permissions_title">Permission</string>
+    <string name="permissions_subtitle">Grouped by privacy category with plain language explanation.</string>
+    <string name="no_requested_permissions_title">No requested permission found</string>
+    <string name="no_requested_permissions_message">The app manifest does not declare runtime or install time permission.</string>
+
+    <!-- Permission details -->
+    <string name="permission_details_explanation">Explanation</string>
+    <string name="permission_details_privacy_impact">Privacy Impact</string>
+    <string name="permission_details_common_legitimate_use">Common Legitimate Use</string>
+
+    <!-- Score -->
+    <string name="privacy_score_result_title">Privacy Score Result</string>
+    <string name="score_how_it_works_title">How the score work</string>
+    <string name="score_how_it_works_message">The score start at 100 and decreases for dangerous permission, tracker, background access, overlay, accessibility service, SMS or call access, and suspicious permission combinations.</string>
+    <string name="score_factors_title">Score Factor</string>
+
+    <!-- Settings -->
+    <string name="settings_system_apps_title">System app</string>
+    <string name="settings_system_apps_description">Include preinstalled package in scan</string>
+    <string name="settings_deep_tracker_scan_title">Deep tracker scan</string>
+    <string name="settings_deep_tracker_scan_description">Scan APK entry for tracker SDK signature</string>
+    <string name="settings_technical_names_title">Technical name</string>
+    <string name="settings_technical_names_description">Show Android permission identifier</string>
+    <string name="settings_warm_contrast_title">Warm contrast</string>
+    <string name="settings_warm_contrast_description">Softer glass palette on bright display</string>
+    <string name="settings_privacy_by_design_title">Privacy by design</string>
+    <string name="settings_privacy_by_design_message">No internet access. All analysis run locally.</string>
+    <string name="latest_features_update_title">Upgrade to Pro</string>
+    <string name="latest_features_update_message">Get App Permission Analyzer Pro for the latest features and improvements.</string>
+
+    <!-- Share report -->
+    <string name="share_permissions_none_requested">None requested</string>
+    <string name="share_none_detected">None detected</string>
+    <string name="share_trackers_not_scanned">Not scanned in the fast app list. Open detail to run tracker detection.</string>
+    <string name="share_no_risky_combinations">No risky combination detected</string>
+    <string name="share_label_app">App</string>
+    <string name="share_label_package">Package</string>
+    <string name="share_label_version">Version</string>
+    <string name="share_label_privacy_score">Privacy Score</string>
+    <string name="share_label_summary">Summary</string>
+    <string name="share_label_trackers">Tracker</string>
+    <string name="share_label_permissions">Permission</string>
+    <string name="share_label_warnings">Warning</string>
+    <string name="share_label_line_format">%1$s: %2$s</string>
+    <string name="share_section_header_format">%1$s:</string>
+    <string name="share_group_line_format">%1$s: %2$s</string>
+    <string name="share_warning_line_format">- %1$s: %2$s</string>
+    <string name="share_privacy_score_value">%1$d/100 (%2$s)</string>
+    <string name="share_report_generated_locally">This report was generated locally on the device.</string>
+
+    <!-- Warning detector -->
+    <string name="warning_accessibility_overlay_title">Potential privacy concern detected</string>
+    <string name="warning_accessibility_overlay_description">This app combine accessibility style control with overlay. That pairing can observe screens and influence tap when misused.</string>
+    <string name="warning_sms_contacts_title">SMS and contact requested together</string>
+    <string name="warning_sms_contacts_description">This combination can expose message and your contact list. It should only appear in messaging, dialer, or backup app.</string>
+    <string name="warning_background_location_trackers_title">Background location with tracker</string>
+    <string name="warning_background_location_trackers_description">Background location plus tracking SDK may allow long term movement profile.</string>
+    <string name="warning_overlay_sensitive_communication_title">Overlay with sensitive communication access</string>
+    <string name="warning_overlay_sensitive_communication_description">Overlay combined with SMS or call access can increase phishing and account takeover risk.</string>
+    <string name="warning_permissions_mismatch_title">Permission may not match the app purpose</string>
+    <string name="warning_permissions_mismatch_description">This app looks like a simple utility but requests sensitive access such as contact, SMS, phone, or precise location.</string>
+    <string name="warning_many_sensitive_permissions_title">Several sensitive permissions requested</string>
+    <string name="warning_many_sensitive_permissions_description">This app request multiple sensitive permission. Review whether each one is related to feature you use.</string>
+
+    <!-- Privacy score engine -->
+    <string name="score_factor_background_access">Background access can keep the app active beyond the visible session.</string>
+    <string name="score_factor_accessibility_service">Accessibility service capability can observe or control sensitive screen content.</string>
+    <string name="score_factor_overlay_access">Overlay access can draw on top of other apps.</string>
+    <string name="score_factor_communication_access">SMS, call, or call log access has high privacy impact.</string>
+    <string name="score_factor_suspicious_combinations">Suspicious permission combinations were detected.</string>
+    <string name="score_factor_no_risks">No sensitive permission, tracker, or risky combination were detected.</string>
+    <string name="score_summary_high_risk">High privacy risk detected</string>
+    <string name="score_summary_potential_concern">Potential privacy concern detected</string>
+    <string name="score_summary_multiple_trackers">Contain multiple tracking SDK</string>
+    <string name="score_summary_no_sensitive_permissions">No sensitive permission detected</string>
+    <string name="score_summary_minimal_permissions">Minimal permission usage</string>
+    <string name="score_summary_review_sensitive_permissions">Review sensitive permission before trusting this app</string>
+
+    <!-- Trackers -->
+    <string name="tracker_name_firebase_analytics">Firebase Analytics</string>
+    <string name="tracker_impact_firebase_analytics">Used for event analytics and audience measurement.</string>
+    <string name="tracker_name_admob">AdMob</string>
+    <string name="tracker_impact_admob">Used for mobile advertising, ad measurement, and monetization.</string>
+    <string name="tracker_name_facebook_sdk">Facebook SDK</string>
+    <string name="tracker_impact_facebook_sdk">Used for social login, app events, attribution, and advertising measurement.</string>
+    <string name="tracker_name_appsflyer">AppsFlyer</string>
+    <string name="tracker_impact_appsflyer">Used for install attribution, campaign analytics, and marketing measurement.</string>
+    <string name="tracker_name_adjust">Adjust</string>
+    <string name="tracker_impact_adjust">Used for attribution analytics, campaign measurement, and fraud prevention.</string>
+    <string name="tracker_name_onesignal">OneSignal</string>
+    <string name="tracker_impact_onesignal">Used for push messaging, engagement analytics, and notification attribution.</string>
+
+    <!-- Permission catalog -->
+    <string name="permission_camera_display_name">Camera</string>
+    <string name="permission_camera_explanation">Allows the app to access your camera for taking photo, recording video, or scanning QR code.</string>
+    <string name="permission_camera_privacy_impact">The app can capture image or video while you are using camera feature.</string>
+    <string name="permission_camera_legitimate_use">Photo app, video call, document scanner, QR code reader, and banking verification.</string>
+
+    <string name="permission_microphone_display_name">Microphone</string>
+    <string name="permission_microphone_explanation">Allow the app to record audio through the device microphone.</string>
+    <string name="permission_microphone_privacy_impact">Voice, room sound, or call may be captured when the app is using the microphone.</string>
+    <string name="permission_microphone_legitimate_use">Voice message, meeting, music recording, accessibility tools, and speech search.</string>
+
+    <string name="permission_precise_location_display_name">Precise location</string>
+    <string name="permission_precise_location_explanation">Allow the app to estimate your exact location using GPS, Wi-Fi, Bluetooth, or mobile network.</string>
+    <string name="permission_precise_location_privacy_impact">Precise location can reveal where you live, work, travel, and spend time.</string>
+    <string name="permission_precise_location_legitimate_use">Maps, ride sharing, local weather, delivery app, and location based reminder.</string>
+
+    <string name="permission_approximate_location_display_name">Approximate location</string>
+    <string name="permission_approximate_location_explanation">Allow the app to estimate your general area without exact GPS level accuracy.</string>
+    <string name="permission_approximate_location_privacy_impact">Your city, neighborhood, or nearby place may still reveal sensitive habit.</string>
+    <string name="permission_approximate_location_legitimate_use">Local weather, nearby store search, regional content, and fraud prevention.</string>
+
+    <string name="permission_background_location_display_name">Background location</string>
+    <string name="permission_background_location_explanation">Allow location tracking even when the app is closed or not visible on screen.</string>
+    <string name="permission_background_location_privacy_impact">The app may build a timeline of your movement over time.</string>
+    <string name="permission_background_location_legitimate_use">Family safety, fitness tracking, navigation alert, and lost device feature.</string>
+
+    <string name="permission_read_contacts_display_name">Read contact</string>
+    <string name="permission_read_contacts_explanation">Allow the app to read name, phone number, email address, and other saved contact detail.</string>
+    <string name="permission_read_contacts_privacy_impact">Your social graph and other people contact information may be exposed.</string>
+    <string name="permission_read_contacts_legitimate_use">Messaging, caller ID, contact backup, and friend discovery.</string>
+
+    <string name="permission_edit_contacts_display_name">Edit contacts</string>
+    <string name="permission_edit_contacts_explanation">Allow the app to add or change contact saved on your device.</string>
+    <string name="permission_edit_contacts_privacy_impact">The app can modify personal contact record.</string>
+    <string name="permission_edit_contacts_legitimate_use">Contact manager, sync tools, dialer, and business card scanner.</string>
+
+    <string name="permission_device_accounts_display_name">Device account</string>
+    <string name="permission_device_accounts_explanation">Allow the app to see account configured on the device.</string>
+    <string name="permission_device_accounts_privacy_impact">Account name can be used to identify you across app or service.</string>
+    <string name="permission_device_accounts_legitimate_use">Account picker, email clients, and sync setup.</string>
+
+    <string name="permission_read_calendar_display_name">Read calendar</string>
+    <string name="permission_read_calendar_explanation">Allow the app to read calendar event saved on your device.</string>
+    <string name="permission_read_calendar_privacy_impact">Event can reveal meeting, travel, routine, and personal plan.</string>
+    <string name="permission_read_calendar_legitimate_use">Calendar app, scheduling tool, travel app, and reminder.</string>
+
+    <string name="permission_edit_calendar_display_name">Edit calendar</string>
+    <string name="permission_edit_calendar_explanation">Allow the app to add or change calendar event.</string>
+    <string name="permission_edit_calendar_privacy_impact">The app can alter your schedule or create event on your behalf.</string>
+    <string name="permission_edit_calendar_legitimate_use">Scheduling tool, booking app, reminder, and productivity app.</string>
+
+    <string name="permission_read_sms_display_name">Read SMS</string>
+    <string name="permission_read_sms_explanation">Allow the app to read text message stored on your device.</string>
+    <string name="permission_read_sms_privacy_impact">Messages may include one time password, personal conversation, and account alert.</string>
+    <string name="permission_read_sms_legitimate_use">Default SMS app, backup tools, and verified OTP autofill experience.</string>
+
+    <string name="permission_send_sms_display_name">Send SMS</string>
+    <string name="permission_send_sms_explanation">Allow the app to send text message from your phone number.</string>
+    <string name="permission_send_sms_privacy_impact">The app could send message that cost money or reveal your identity.</string>
+    <string name="permission_send_sms_legitimate_use">Default SMS app, carrier tools, emergency app, and two factor setup flow.</string>
+
+    <string name="permission_receive_sms_display_name">Receive SMS</string>
+    <string name="permission_receive_sms_explanation">Allow the app to receive and process incoming text messages.</string>
+    <string name="permission_receive_sms_privacy_impact">Incoming message and verification code may be visible to the app.</string>
+    <string name="permission_receive_sms_legitimate_use">Default SMS app, OTP verification, carrier tools, and backup utilities.</string>
+
+    <string name="permission_phone_state_display_name">Phone state</string>
+    <string name="permission_phone_state_explanation">Allow the app to read phone status such as network detail and call state.</string>
+    <string name="permission_phone_state_privacy_impact">Device and carrier information can be used for profiling or fraud check.</string>
+    <string name="permission_phone_state_legitimate_use">Dialer, carrier app, device diagnostic, and security tools.</string>
+
+    <string name="permission_place_phone_calls_display_name">Place phone calls</string>
+    <string name="permission_place_phone_calls_explanation">Allow the app to start phone call directly.</string>
+    <string name="permission_place_phone_calls_privacy_impact">The app can initiate call that may expose your phone number or cost money.</string>
+    <string name="permission_place_phone_calls_legitimate_use">Dialer, emergency app, customer support tools, and accessibility shortcut.</string>
+
+    <string name="permission_read_call_log_display_name">Read call log</string>
+    <string name="permission_read_call_log_explanation">Allow the app to read your call history.</string>
+    <string name="permission_read_call_log_privacy_impact">Call logs reveal who you communicate with and when.</string>
+    <string name="permission_read_call_log_legitimate_use">Dialer, caller ID, backup tools, and phone management app.</string>
+
+    <string name="permission_edit_call_log_display_name">Edit call log</string>
+    <string name="permission_edit_call_log_explanation">Allow the app to add or change call history entries.</string>
+    <string name="permission_edit_call_log_privacy_impact">The app can alter record of call made or received.</string>
+    <string name="permission_edit_call_log_legitimate_use">Dialer, call blocker, and backup restore tools.</string>
+
+    <string name="permission_read_shared_storage_display_name">Read shared storage</string>
+    <string name="permission_read_shared_storage_explanation">Allow the app to read file from shared storage.</string>
+    <string name="permission_read_shared_storage_privacy_impact">Photo, download, document, or other file may be accessible depending on Android version.</string>
+    <string name="permission_read_shared_storage_legitimate_use">File manager, media editor, backup tool, and document app.</string>
+
+    <string name="permission_write_shared_storage_display_name">Write shared storage</string>
+    <string name="permission_write_shared_storage_explanation">Allow the app to add, edit, or remove file in shared storage on older Android version.</string>
+    <string name="permission_write_shared_storage_privacy_impact">The app may change file that other app can see.</string>
+    <string name="permission_write_shared_storage_legitimate_use">File manager, camera app, media editor, and download tools.</string>
+
+    <string name="permission_all_files_access_display_name">All files access</string>
+    <string name="permission_all_files_access_explanation">Allow broad access to file across shared storage.</string>
+    <string name="permission_all_files_access_privacy_impact">The app may inspect many personal file beyond its own folder.</string>
+    <string name="permission_all_files_access_legitimate_use">Full file manager, backup utility, antivirus app, and device migration tools.</string>
+
+    <string name="permission_photos_and_images_display_name">Photos and images</string>
+    <string name="permission_photos_and_images_explanation">Allows the app to read photos and images on the device.</string>
+    <string name="permission_photos_and_images_privacy_impact">Photos may include faces, locations, screenshots, and private documents.</string>
+    <string name="permission_photos_and_images_legitimate_use">Gallery apps, photo editors, social apps, and document scanners.</string>
+
+    <string name="permission_videos_display_name">Videos</string>
+    <string name="permission_videos_explanation">Allow the app to read videos on the device.</string>
+    <string name="permission_videos_privacy_impact">Videos may contain private scenes, voices, locations, or personal records.</string>
+    <string name="permission_videos_legitimate_use">Gallery apps, video editors, messaging apps, and backup utilities.</string>
+
+    <string name="permission_audio_files_display_name">Audio files</string>
+    <string name="permission_audio_files_explanation">Allow the app to read music and other audio file on the device.</string>
+    <string name="permission_audio_files_privacy_impact">Audio file can reveal recording, voice note, and listening habit.</string>
+    <string name="permission_audio_files_legitimate_use">Music player, audio editor, podcast app, and backup tools.</string>
+
+    <string name="permission_display_over_other_apps_display_name">Display over other apps</string>
+    <string name="permission_display_over_other_apps_explanation">Allow the app to draw floating windows or overlay on top of other app.</string>
+    <string name="permission_display_over_other_apps_privacy_impact">Overlay can hide real button, imitate screen, or influence tap.</string>
+    <string name="permission_display_over_other_apps_legitimate_use">Chat head, screen filter, floating tools, and accessibility helper.</string>
+
+    <string name="permission_install_unknown_apps_display_name">Install unknown apps</string>
+    <string name="permission_install_unknown_apps_explanation">Allow the app to request installing APK file from outside an app store.</string>
+    <string name="permission_install_unknown_apps_privacy_impact">This can increase risk if the app distributes untrusted APK file.</string>
+    <string name="permission_install_unknown_apps_legitimate_use">App store, enterprise installer, device management, and developer tools.</string>
+
+    <string name="permission_bluetooth_devices_display_name">Bluetooth devices</string>
+    <string name="permission_bluetooth_devices_explanation">Allow the app to connect to nearby Bluetooth device.</string>
+    <string name="permission_bluetooth_devices_privacy_impact">Nearby device may reveal location context or personal accessories.</string>
+    <string name="permission_bluetooth_devices_legitimate_use">Headphone, watches, car system, smart home device, and health device.</string>
+
+    <string name="permission_body_sensors_display_name">Body sensors</string>
+    <string name="permission_body_sensors_explanation">Allow the app to read health related sensor data from compatible device.</string>
+    <string name="permission_body_sensors_privacy_impact">Sensor data may reveal fitness, health, and biometric pattern.</string>
+    <string name="permission_body_sensors_legitimate_use">Fitness, health, wellness, and medical companion app.</string>
+
+    <string name="permission_physical_activity_display_name">Physical activity</string>
+    <string name="permission_physical_activity_explanation">Allow the app to detect activity such as walking, running, or driving.</string>
+    <string name="permission_physical_activity_privacy_impact">Activity pattern can reveal routine and lifestyle habit.</string>
+    <string name="permission_physical_activity_legitimate_use">Fitness tracker, safety app, maps, and automation tools.</string>
+
+    <string name="permission_notifications_display_name">Notifications</string>
+    <string name="permission_notifications_explanation">Allow the app to send notification.</string>
+    <string name="permission_notifications_privacy_impact">Notification can expose app activity on the lock screen or be used for attention tracking.</string>
+    <string name="permission_notifications_legitimate_use">Message, reminder, account alert, delivery update, and security warning.</string>
+
+    <string name="permission_start_after_reboot_display_name">Start after reboot</string>
+    <string name="permission_start_after_reboot_explanation">Allow the app to start background work after the phone reboot.</string>
+    <string name="permission_start_after_reboot_privacy_impact">The app can resume background behavior without you opening it.</string>
+    <string name="permission_start_after_reboot_legitimate_use">Alarm, security app, sync tools, health tracking, and device utilities.</string>
+
+    <string name="permission_foreground_service_display_name">Foreground service</string>
+    <string name="permission_foreground_service_explanation">Allow the app to run long task while showing an ongoing notification.</string>
+    <string name="permission_foreground_service_privacy_impact">Long running service may keep sensor, location, or network activity active.</string>
+    <string name="permission_foreground_service_legitimate_use">Navigation, music playback, fitness tracking, call, and file upload.</string>
+
+    <string name="permission_keep_device_awake_display_name">Keep device awake</string>
+    <string name="permission_keep_device_awake_explanation">Allows the app to keep the CPU or screen active for background tasks.</string>
+    <string name="permission_keep_device_awake_privacy_impact">This is usually not sensitive, but it can support persistent tracking or battery drain.</string>
+    <string name="permission_keep_device_awake_legitimate_use">Music playback, navigation, downloads, alarms, and health tracking.</string>
+
+    <string name="permission_advertising_id_display_name">Advertising ID</string>
+    <string name="permission_advertising_id_explanation">Allow access to the device advertising identifier when available.</string>
+    <string name="permission_advertising_id_privacy_impact">The advertising ID can be used for measurement, ad personalization, or cross app profiling.</string>
+    <string name="permission_advertising_id_legitimate_use">Ad supported app, analytics attribution, and fraud prevention.</string>
+
+    <string name="permission_exact_alarms_display_name">Exact alarms</string>
+    <string name="permission_exact_alarms_explanation">Allow the app to trigger alarm at precise time.</string>
+    <string name="permission_exact_alarms_privacy_impact">Exact alarm are not usually private, but they can keep an app active in the background.</string>
+    <string name="permission_exact_alarms_legitimate_use">Alarm clock, calendar, medication reminder, and time sensitive alert.</string>
+
+    <string name="permission_inferred_explanation">Allow the app to use %1$s if the feature is available on this device.</string>
+    <string name="permission_inferred_privacy_impact">Review whether this permission matches the app purpose before trusting it.</string>
+    <string name="permission_inferred_legitimate_use">May be needed for a specific feature declared by the developer.</string>
+
+    <!-- Share options -->
+    <string name="share_options_title">Share Report</string>
+    <string name="share_options_subtitle">Choose how to export and share this report</string>
+    <string name="share_as_text">Share as Text</string>
+    <string name="share_as_text_desc">Share plain text via any app</string>
+    <string name="share_as_txt">Export as TXT File</string>
+    <string name="share_as_txt_desc">Share a formatted .txt report file</string>
+    <string name="share_as_pdf">Export as PDF</string>
+    <string name="share_as_pdf_desc">Share a formatted PDF report</string>
+    <string name="share_as_markdown">Export as Markdown</string>
+    <string name="share_as_markdown_desc">Share a .md report file</string>
+    <string name="chooser_share_txt">Share TXT report</string>
+    <string name="chooser_share_pdf">Share PDF report</string>
+    <string name="chooser_share_markdown">Share Markdown report</string>
+    <string name="toast_share_failed">Failed to generate report file.</string>
+</resources>

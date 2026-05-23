@@ -1,0 +1,438 @@
+<resources>
+    <!-- App -->
+    <string name="app_name">Analyzer</string>
+    <string name="action_back">Kembali</string>
+    <string name="action_retry">Coba Lagi</string>
+    <string name="action_clear">Hapus</string>
+    <string name="action_select_apk">Pilih APK</string>
+    <string name="action_choose_apk">Pilih APK</string>
+    <string name="action_share">Bagikan</string>
+    <string name="action_copy_report">Salin Laporan</string>
+    <string name="action_score_details">Detail Skor</string>
+    <string name="action_open_google_play">Buka Pro di Google Play</string>
+    <string name="action_view_apk_details">Lihat Detail APK</string>
+    <string name="action_install_apk">Instal APK</string>
+    <string name="clipboard_label_app_analysis">Analisis aplikasi</string>
+    <string name="chooser_share_analysis">Bagikan analisis</string>
+    <string name="toast_report_copied">Laporan berhasil disalin ke clipboard.</string>
+    <string name="toast_apk_file_unavailable">File APK tidak lagi tersedia. Pilih APK lagi.</string>
+    <string name="toast_no_apk_installer">Tidak ada aplikasi installer yang ditemukan untuk APK ini.</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Beranda</string>
+    <string name="nav_apps_apk">Aplikasi/APK</string>
+    <string name="nav_settings">Pengaturan</string>
+    <string name="title_privacy_score">Skor Privasi</string>
+
+    <!-- Fallbacks and errors -->
+    <string name="unknown_package_name">unknown.package</string>
+    <string name="unknown_version">Tidak diketahui</string>
+    <string name="unknown_app_name">Aplikasi tidak dikenal</string>
+    <string name="error_scan_installed_apps">Tidak dapat memindai aplikasi yang terinstal.</string>
+    <string name="error_analyze_selected_apk">Tidak dapat menganalisis APK yang dipilih.</string>
+    <string name="error_invalid_apk_file">File ini tidak terlihat seperti APK Android yang valid.</string>
+    <string name="error_apk_manifest_unparsed">Manifest APK tidak dapat diparsing.</string>
+    <string name="error_apk_too_large">APK terlalu besar untuk dianalisis dengan nyaman di perangkat ini.</string>
+    <string name="error_open_selected_apk">Tidak dapat membuka APK yang dipilih.</string>
+
+    <!-- Enums -->
+    <string name="permission_category_privacy">Privasi</string>
+    <string name="permission_category_device_access">Akses Perangkat</string>
+    <string name="permission_category_communication">Komunikasi</string>
+    <string name="permission_category_storage">Penyimpanan</string>
+    <string name="permission_category_tracking">Pelacakan</string>
+    <string name="permission_category_background_access">Akses Latar Belakang</string>
+    <string name="permission_category_other">Lainnya</string>
+
+    <string name="warning_level_low">Rendah</string>
+    <string name="warning_level_medium">Sedang</string>
+    <string name="warning_level_high">Tinggi</string>
+    <string name="warning_level_critical">Kritis</string>
+
+    <string name="risk_level_high">Risiko Tinggi</string>
+    <string name="risk_level_medium">Risiko Sedang</string>
+    <string name="risk_level_safer">Lebih Aman</string>
+
+    <string name="sort_mode_lowest_score">Skor terendah</string>
+    <string name="sort_mode_permission_count">Izin terbanyak</string>
+    <string name="sort_mode_app_name">Nama aplikasi</string>
+
+    <!-- Common UI -->
+    <string name="app_icon_content_description">Ikon %1$s</string>
+    <string name="app_icon_fallback_letter">A</string>
+    <string name="privacy_score_label">Skor Privasi</string>
+    <string name="privacy_score_range_legend">0-30 Risiko Tinggi  |  31-70 Risiko Sedang  |  71-100 Lebih Aman</string>
+    <string name="score_range_multiline">0-30 = Risiko Tinggi\n31-70 = Risiko Sedang\n71-100 = Lebih Aman</string>
+    <string name="score_factor_bullet">- %1$s</string>
+    <string name="metadata_two_part_format">%1$s  |  %2$s</string>
+    <string name="version_permissions_summary">Versi %1$s  |  %2$s</string>
+    <string name="apk_version_permissions_summary">v%1$s  |  %2$s</string>
+    <string name="app_version_summary">Versi %1$s (%2$d)</string>
+
+    <plurals name="permissions_count">
+        <item quantity="one">%d izin</item>
+        <item quantity="other">%d izin</item>
+    </plurals>
+    <plurals name="trackers_count">
+        <item quantity="one">%d pelacak</item>
+        <item quantity="other">%d pelacak</item>
+    </plurals>
+    <plurals name="requested_permissions_count">
+        <item quantity="one">%d izin yang diminta</item>
+        <item quantity="other">%d izin yang diminta</item>
+    </plurals>
+    <plurals name="tracker_sdks_count">
+        <item quantity="one">%d SDK pelacak</item>
+        <item quantity="other">%d SDK pelacak</item>
+    </plurals>
+    <plurals name="warning_signals_count">
+        <item quantity="one">%d sinyal peringatan</item>
+        <item quantity="other">%d sinyal peringatan</item>
+    </plurals>
+    <plurals name="score_factor_sensitive_permissions">
+        <item quantity="one">%d izin sensitif menurunkan skor.</item>
+        <item quantity="other">%d izin sensitif menurunkan skor.</item>
+    </plurals>
+    <plurals name="score_factor_trackers">
+        <item quantity="one">%d SDK pelacak atau analitik terdeteksi.</item>
+        <item quantity="other">%d SDK pelacak atau analitik terdeteksi.</item>
+    </plurals>
+
+    <!-- Home -->
+    <string name="home_title">Penganalisis Aplikasi</string>
+    <string name="home_stat_scanned">Dipindai</string>
+    <string name="home_stat_high_risk">Risiko Tinggi</string>
+    <string name="home_stat_medium">Sedang</string>
+    <string name="home_stat_safer">Lebih Aman</string>
+    <string name="home_scan_apps">Pindai Aplikasi</string>
+    <string name="home_scan_apps_description">Periksa izin, pelacak, dan skor privasi</string>
+
+    <!-- Apps -->
+    <string name="tab_apps">Aplikasi</string>
+    <string name="tab_apk">APK</string>
+    <string name="apps_search_label">Cari</string>
+    <string name="apps_filter_high_risk">Risiko tinggi</string>
+    <string name="installed_apps_title">Aplikasi Terinstal</string>
+    <string name="installed_apps_subtitle">Cari, urutkan, dan filter aplikasi berdasarkan risiko privasi.</string>
+    <string name="installed_apps_search_label">Cari aplikasi atau nama paket</string>
+    <string name="installed_apps_filter_high_risk_only">Hanya risiko tinggi</string>
+    <string name="scan_failed_title">Pemindaian gagal</string>
+    <string name="loading_fast_scanning_installed_apps">Memindai cepat aplikasi terinstal</string>
+    <string name="loading_refreshing_app_list">Menyegarkan daftar aplikasi</string>
+    <string name="empty_no_apps_match_view_title">Tidak ada aplikasi yang cocok dengan tampilan ini</string>
+    <string name="empty_no_apps_match_view_message">Sesuaikan pencarian atau filter, lalu pindai lagi jika diperlukan.</string>
+    <string name="empty_no_apps_found_title">Tidak ada aplikasi ditemukan</string>
+    <string name="empty_no_apps_found_message">Sesuaikan pencarian atau filter</string>
+    <string name="tracker_scan_tap_hint">ketuk untuk memindai pelacak</string>
+    <string name="tracker_scan_running_short">pemindaian pelacak sedang berjalan</string>
+    <string name="select_apk_to_inspect">Pilih APK untuk diperiksa</string>
+    <string name="loading_analyzing">Menganalisis...</string>
+    <string name="analysis_failed_title">Analisis gagal</string>
+
+    <!-- APK analyzer -->
+    <string name="apk_analyzer_title">Penganalisis APK</string>
+    <string name="apk_analyzer_subtitle">Periksa file APK secara lokal sebelum instalasi.</string>
+    <string name="apk_private_local_analysis_title">Analisis lokal privat</string>
+    <string name="apk_private_local_analysis_message">APK yang dipilih disalin ke cache aplikasi sementara hanya selama proses parsing manifest dan pemindaian signature pelacak yang dikenal.</string>
+    <string name="tracker_scan_enabled">Deteksi pelacak mendalam diaktifkan.</string>
+    <string name="tracker_scan_disabled">Deteksi pelacak mendalam dinonaktifkan di Pengaturan.</string>
+    <string name="loading_analyzing_apk">Menganalisis APK</string>
+    <string name="apk_analysis_failed_title">Analisis APK gagal</string>
+
+    <!-- App details -->
+    <string name="privacy_summary_title">Ringkasan Privasi</string>
+    <string name="analysis_summary_tracker_scan_running">pemindaian pelacak sedang berjalan</string>
+    <string name="analysis_summary_counts_format">%1$s, %2$s, %3$s.</string>
+    <string name="risk_analysis_title">Analisis Risiko</string>
+    <string name="risk_analysis_subtitle">Kombinasi mencurigakan dan perilaku berdampak tinggi.</string>
+    <string name="no_risky_combinations_title">Tidak ada kombinasi berisiko yang terdeteksi</string>
+    <string name="no_risky_combinations_message">Ini tidak menjamin aplikasi aman, tetapi manifest tidak menunjukkan pola mencurigakan yang umum.</string>
+    <string name="trackers_title">Pelacak</string>
+    <string name="trackers_subtitle">Signature umum untuk SDK analitik, iklan, atribusi, atau pesan.</string>
+    <string name="no_common_trackers_title">Tidak ada pelacak umum yang terdeteksi</string>
+    <string name="no_common_trackers_message">Pemindai tidak menemukan signature Firebase Analytics, AdMob, Facebook SDK, AppsFlyer, Adjust, atau OneSignal.</string>
+    <string name="tracker_scan_running_title">Pemindaian pelacak sedang berjalan</string>
+    <string name="tracker_scan_running_message">Daftar aplikasi dibuka cepat terlebih dahulu. Deteksi pelacak berjalan saat halaman detail ini dibuka dan akan memperbarui laporan setelah selesai.</string>
+    <string name="permissions_title">Izin</string>
+    <string name="permissions_subtitle">Dikelompokkan berdasarkan kategori privasi dengan penjelasan bahasa yang mudah dipahami.</string>
+    <string name="no_requested_permissions_title">Tidak ada izin yang diminta</string>
+    <string name="no_requested_permissions_message">Manifest aplikasi tidak mendeklarasikan izin runtime atau izin saat pemasangan.</string>
+
+    <!-- Permission details -->
+    <string name="permission_details_explanation">Penjelasan</string>
+    <string name="permission_details_privacy_impact">Dampak Privasi</string>
+    <string name="permission_details_common_legitimate_use">Penggunaan Wajar Umum</string>
+
+    <!-- Score -->
+    <string name="privacy_score_result_title">Hasil Skor Privasi</string>
+    <string name="score_how_it_works_title">Cara kerja skor</string>
+    <string name="score_how_it_works_message">Skor dimulai dari 100 dan berkurang karena izin berbahaya, pelacak, akses latar belakang, overlay, layanan aksesibilitas, akses SMS atau panggilan, dan kombinasi izin yang mencurigakan.</string>
+    <string name="score_factors_title">Faktor Skor</string>
+
+    <!-- Settings -->
+    <string name="settings_system_apps_title">Aplikasi sistem</string>
+    <string name="settings_system_apps_description">Sertakan paket bawaan dalam pemindaian</string>
+    <string name="settings_deep_tracker_scan_title">Pemindaian pelacak mendalam</string>
+    <string name="settings_deep_tracker_scan_description">Pindai entri APK untuk signature SDK pelacak</string>
+    <string name="settings_technical_names_title">Nama teknis</string>
+    <string name="settings_technical_names_description">Tampilkan identifier izin Android</string>
+    <string name="settings_warm_contrast_title">Kontras hangat</string>
+    <string name="settings_warm_contrast_description">Palet kaca yang lebih lembut pada layar terang</string>
+    <string name="settings_privacy_by_design_title">Privasi sejak awal</string>
+    <string name="settings_privacy_by_design_message">Tidak ada akses internet. Semua analisis berjalan secara lokal.</string>
+    <string name="latest_features_update_title">Upgrade ke Pro</string>
+    <string name="latest_features_update_message">Dapatkan App Permission Analyzer Pro untuk fitur dan peningkatan terbaru.</string>
+
+    <!-- Share report -->
+    <string name="share_permissions_none_requested">Tidak ada yang diminta</string>
+    <string name="share_none_detected">Tidak terdeteksi</string>
+    <string name="share_trackers_not_scanned">Belum dipindai dalam daftar aplikasi cepat. Buka detail untuk menjalankan deteksi pelacak.</string>
+    <string name="share_no_risky_combinations">Tidak ada kombinasi berisiko yang terdeteksi</string>
+    <string name="share_label_app">Aplikasi</string>
+    <string name="share_label_package">Paket</string>
+    <string name="share_label_version">Versi</string>
+    <string name="share_label_privacy_score">Skor Privasi</string>
+    <string name="share_label_summary">Ringkasan</string>
+    <string name="share_label_trackers">Pelacak</string>
+    <string name="share_label_permissions">Izin</string>
+    <string name="share_label_warnings">Peringatan</string>
+    <string name="share_label_line_format">%1$s: %2$s</string>
+    <string name="share_section_header_format">%1$s:</string>
+    <string name="share_group_line_format">%1$s: %2$s</string>
+    <string name="share_warning_line_format">- %1$s: %2$s</string>
+    <string name="share_privacy_score_value">%1$d/100 (%2$s)</string>
+    <string name="share_report_generated_locally">Laporan ini dibuat secara lokal di perangkat.</string>
+
+    <!-- Warning detector -->
+    <string name="warning_accessibility_overlay_title">Potensi masalah privasi terdeteksi</string>
+    <string name="warning_accessibility_overlay_description">Aplikasi ini menggabungkan kontrol bergaya aksesibilitas dengan overlay. Kombinasi ini dapat mengamati layar dan memengaruhi ketukan jika disalahgunakan.</string>
+    <string name="warning_sms_contacts_title">SMS dan kontak diminta bersamaan</string>
+    <string name="warning_sms_contacts_description">Kombinasi ini dapat mengekspos pesan dan daftar kontak Anda. Ini seharusnya hanya muncul pada aplikasi pesan, dialer, atau backup.</string>
+    <string name="warning_background_location_trackers_title">Lokasi latar belakang dengan pelacak</string>
+    <string name="warning_background_location_trackers_description">Lokasi latar belakang ditambah SDK pelacakan dapat memungkinkan pemrofilan pergerakan jangka panjang.</string>
+    <string name="warning_overlay_sensitive_communication_title">Overlay dengan akses komunikasi sensitif</string>
+    <string name="warning_overlay_sensitive_communication_description">Overlay yang digabungkan dengan akses SMS atau panggilan dapat meningkatkan risiko phishing dan pengambilalihan akun.</string>
+    <string name="warning_permissions_mismatch_title">Izin mungkin tidak sesuai dengan tujuan aplikasi</string>
+    <string name="warning_permissions_mismatch_description">Aplikasi ini terlihat seperti utilitas sederhana tetapi meminta akses sensitif seperti kontak, SMS, telepon, atau lokasi presisi.</string>
+    <string name="warning_many_sensitive_permissions_title">Beberapa izin sensitif diminta</string>
+    <string name="warning_many_sensitive_permissions_description">Aplikasi ini meminta beberapa izin sensitif. Tinjau apakah masing-masing izin terkait dengan fitur yang Anda gunakan.</string>
+
+    <!-- Privacy score engine -->
+    <string name="score_factor_background_access">Akses latar belakang dapat membuat aplikasi tetap aktif di luar sesi yang terlihat.</string>
+    <string name="score_factor_accessibility_service">Kemampuan layanan aksesibilitas dapat mengamati atau mengontrol konten layar yang sensitif.</string>
+    <string name="score_factor_overlay_access">Akses overlay dapat menggambar di atas aplikasi lain.</string>
+    <string name="score_factor_communication_access">Akses SMS, panggilan, atau log panggilan memiliki dampak privasi yang tinggi.</string>
+    <string name="score_factor_suspicious_combinations">Kombinasi izin yang mencurigakan terdeteksi.</string>
+    <string name="score_factor_no_risks">Tidak ada izin sensitif, pelacak, atau kombinasi berisiko yang terdeteksi.</string>
+    <string name="score_summary_high_risk">Risiko privasi tinggi terdeteksi</string>
+    <string name="score_summary_potential_concern">Potensi masalah privasi terdeteksi</string>
+    <string name="score_summary_multiple_trackers">Mengandung beberapa SDK pelacakan</string>
+    <string name="score_summary_no_sensitive_permissions">Tidak ada izin sensitif yang terdeteksi</string>
+    <string name="score_summary_minimal_permissions">Penggunaan izin minimal</string>
+    <string name="score_summary_review_sensitive_permissions">Tinjau izin sensitif sebelum mempercayai aplikasi ini</string>
+
+    <!-- Trackers -->
+    <string name="tracker_name_firebase_analytics">Firebase Analytics</string>
+    <string name="tracker_impact_firebase_analytics">Digunakan untuk analitik peristiwa dan pengukuran audiens.</string>
+    <string name="tracker_name_admob">AdMob</string>
+    <string name="tracker_impact_admob">Digunakan untuk iklan seluler, pengukuran iklan, dan monetisasi.</string>
+    <string name="tracker_name_facebook_sdk">Facebook SDK</string>
+    <string name="tracker_impact_facebook_sdk">Digunakan untuk login sosial, peristiwa aplikasi, atribusi, dan pengukuran iklan.</string>
+    <string name="tracker_name_appsflyer">AppsFlyer</string>
+    <string name="tracker_impact_appsflyer">Digunakan untuk atribusi instalasi, analitik kampanye, dan pengukuran pemasaran.</string>
+    <string name="tracker_name_adjust">Adjust</string>
+    <string name="tracker_impact_adjust">Digunakan untuk analitik atribusi, pengukuran kampanye, dan pencegahan penipuan.</string>
+    <string name="tracker_name_onesignal">OneSignal</string>
+    <string name="tracker_impact_onesignal">Digunakan untuk pesan push, analitik keterlibatan, dan atribusi notifikasi.</string>
+
+    <!-- Permission catalog -->
+    <string name="permission_camera_display_name">Kamera</string>
+    <string name="permission_camera_explanation">Memungkinkan aplikasi mengakses kamera Anda untuk mengambil foto, merekam video, atau memindai kode QR.</string>
+    <string name="permission_camera_privacy_impact">Aplikasi dapat menangkap gambar atau video saat Anda menggunakan fitur kamera.</string>
+    <string name="permission_camera_legitimate_use">Aplikasi foto, panggilan video, pemindai dokumen, pembaca kode QR, dan verifikasi perbankan.</string>
+
+    <string name="permission_microphone_display_name">Mikrofon</string>
+    <string name="permission_microphone_explanation">Memungkinkan aplikasi merekam audio melalui mikrofon perangkat.</string>
+    <string name="permission_microphone_privacy_impact">Suara, bunyi ruangan, atau panggilan dapat direkam saat aplikasi menggunakan mikrofon.</string>
+    <string name="permission_microphone_legitimate_use">Pesan suara, rapat, perekaman musik, alat aksesibilitas, dan pencarian suara.</string>
+
+    <string name="permission_precise_location_display_name">Lokasi presisi</string>
+    <string name="permission_precise_location_explanation">Memungkinkan aplikasi memperkirakan lokasi tepat Anda menggunakan GPS, Wi-Fi, Bluetooth, atau jaringan seluler.</string>
+    <string name="permission_precise_location_privacy_impact">Lokasi presisi dapat mengungkap tempat Anda tinggal, bekerja, bepergian, dan menghabiskan waktu.</string>
+    <string name="permission_precise_location_legitimate_use">Peta, ride sharing, cuaca lokal, aplikasi pengantaran, dan pengingat berbasis lokasi.</string>
+
+    <string name="permission_approximate_location_display_name">Lokasi perkiraan</string>
+    <string name="permission_approximate_location_explanation">Memungkinkan aplikasi memperkirakan area umum Anda tanpa akurasi setingkat GPS.</string>
+    <string name="permission_approximate_location_privacy_impact">Kota, lingkungan, atau tempat terdekat Anda tetap dapat mengungkap kebiasaan sensitif.</string>
+    <string name="permission_approximate_location_legitimate_use">Cuaca lokal, pencarian toko terdekat, konten regional, dan pencegahan penipuan.</string>
+
+    <string name="permission_background_location_display_name">Lokasi latar belakang</string>
+    <string name="permission_background_location_explanation">Memungkinkan pelacakan lokasi meskipun aplikasi ditutup atau tidak terlihat di layar.</string>
+    <string name="permission_background_location_privacy_impact">Aplikasi dapat membangun linimasa pergerakan Anda dari waktu ke waktu.</string>
+    <string name="permission_background_location_legitimate_use">Keamanan keluarga, pelacakan kebugaran, peringatan navigasi, dan fitur perangkat hilang.</string>
+
+    <string name="permission_read_contacts_display_name">Baca kontak</string>
+    <string name="permission_read_contacts_explanation">Memungkinkan aplikasi membaca nama, nomor telepon, alamat email, dan detail kontak tersimpan lainnya.</string>
+    <string name="permission_read_contacts_privacy_impact">Grafik sosial Anda dan informasi kontak orang lain dapat terekspos.</string>
+    <string name="permission_read_contacts_legitimate_use">Pesan, caller ID, backup kontak, dan pencarian teman.</string>
+
+    <string name="permission_edit_contacts_display_name">Edit kontak</string>
+    <string name="permission_edit_contacts_explanation">Memungkinkan aplikasi menambah atau mengubah kontak yang disimpan di perangkat Anda.</string>
+    <string name="permission_edit_contacts_privacy_impact">Aplikasi dapat memodifikasi data kontak pribadi.</string>
+    <string name="permission_edit_contacts_legitimate_use">Pengelola kontak, alat sinkronisasi, dialer, dan pemindai kartu nama.</string>
+
+    <string name="permission_device_accounts_display_name">Akun perangkat</string>
+    <string name="permission_device_accounts_explanation">Memungkinkan aplikasi melihat akun yang dikonfigurasi di perangkat.</string>
+    <string name="permission_device_accounts_privacy_impact">Nama akun dapat digunakan untuk mengidentifikasi Anda di berbagai aplikasi atau layanan.</string>
+    <string name="permission_device_accounts_legitimate_use">Pemilih akun, klien email, dan pengaturan sinkronisasi.</string>
+
+    <string name="permission_read_calendar_display_name">Baca kalender</string>
+    <string name="permission_read_calendar_explanation">Memungkinkan aplikasi membaca acara kalender yang tersimpan di perangkat Anda.</string>
+    <string name="permission_read_calendar_privacy_impact">Acara dapat mengungkap rapat, perjalanan, rutinitas, dan rencana pribadi.</string>
+    <string name="permission_read_calendar_legitimate_use">Aplikasi kalender, alat penjadwalan, aplikasi perjalanan, dan pengingat.</string>
+
+    <string name="permission_edit_calendar_display_name">Edit kalender</string>
+    <string name="permission_edit_calendar_explanation">Memungkinkan aplikasi menambah atau mengubah acara kalender.</string>
+    <string name="permission_edit_calendar_privacy_impact">Aplikasi dapat mengubah jadwal Anda atau membuat acara atas nama Anda.</string>
+    <string name="permission_edit_calendar_legitimate_use">Alat penjadwalan, aplikasi pemesanan, pengingat, dan aplikasi produktivitas.</string>
+
+    <string name="permission_read_sms_display_name">Baca SMS</string>
+    <string name="permission_read_sms_explanation">Memungkinkan aplikasi membaca pesan teks yang tersimpan di perangkat Anda.</string>
+    <string name="permission_read_sms_privacy_impact">Pesan dapat berisi kata sandi sekali pakai, percakapan pribadi, dan peringatan akun.</string>
+    <string name="permission_read_sms_legitimate_use">Aplikasi SMS bawaan, alat backup, dan pengalaman autofill OTP terverifikasi.</string>
+
+    <string name="permission_send_sms_display_name">Kirim SMS</string>
+    <string name="permission_send_sms_explanation">Memungkinkan aplikasi mengirim pesan teks dari nomor telepon Anda.</string>
+    <string name="permission_send_sms_privacy_impact">Aplikasi dapat mengirim pesan yang menimbulkan biaya atau mengungkap identitas Anda.</string>
+    <string name="permission_send_sms_legitimate_use">Aplikasi SMS bawaan, alat operator, aplikasi darurat, dan alur penyiapan autentikasi dua faktor.</string>
+
+    <string name="permission_receive_sms_display_name">Terima SMS</string>
+    <string name="permission_receive_sms_explanation">Memungkinkan aplikasi menerima dan memproses pesan teks masuk.</string>
+    <string name="permission_receive_sms_privacy_impact">Pesan masuk dan kode verifikasi dapat terlihat oleh aplikasi.</string>
+    <string name="permission_receive_sms_legitimate_use">Aplikasi SMS bawaan, verifikasi OTP, alat operator, dan utilitas backup.</string>
+
+    <string name="permission_phone_state_display_name">Status telepon</string>
+    <string name="permission_phone_state_explanation">Memungkinkan aplikasi membaca status telepon seperti detail jaringan dan status panggilan.</string>
+    <string name="permission_phone_state_privacy_impact">Informasi perangkat dan operator dapat digunakan untuk profiling atau pemeriksaan penipuan.</string>
+    <string name="permission_phone_state_legitimate_use">Dialer, aplikasi operator, diagnostik perangkat, dan alat keamanan.</string>
+
+    <string name="permission_place_phone_calls_display_name">Lakukan panggilan telepon</string>
+    <string name="permission_place_phone_calls_explanation">Memungkinkan aplikasi memulai panggilan telepon secara langsung.</string>
+    <string name="permission_place_phone_calls_privacy_impact">Aplikasi dapat memulai panggilan yang mungkin mengungkap nomor telepon Anda atau menimbulkan biaya.</string>
+    <string name="permission_place_phone_calls_legitimate_use">Dialer, aplikasi darurat, alat dukungan pelanggan, dan shortcut aksesibilitas.</string>
+
+    <string name="permission_read_call_log_display_name">Baca log panggilan</string>
+    <string name="permission_read_call_log_explanation">Memungkinkan aplikasi membaca riwayat panggilan Anda.</string>
+    <string name="permission_read_call_log_privacy_impact">Log panggilan mengungkap dengan siapa Anda berkomunikasi dan kapan.</string>
+    <string name="permission_read_call_log_legitimate_use">Dialer, caller ID, alat backup, dan aplikasi manajemen telepon.</string>
+
+    <string name="permission_edit_call_log_display_name">Edit log panggilan</string>
+    <string name="permission_edit_call_log_explanation">Memungkinkan aplikasi menambah atau mengubah entri riwayat panggilan.</string>
+    <string name="permission_edit_call_log_privacy_impact">Aplikasi dapat mengubah catatan panggilan yang dilakukan atau diterima.</string>
+    <string name="permission_edit_call_log_legitimate_use">Dialer, pemblokir panggilan, dan alat pemulihan backup.</string>
+
+    <string name="permission_read_shared_storage_display_name">Baca penyimpanan bersama</string>
+    <string name="permission_read_shared_storage_explanation">Memungkinkan aplikasi membaca file dari penyimpanan bersama.</string>
+    <string name="permission_read_shared_storage_privacy_impact">Foto, unduhan, dokumen, atau file lain dapat diakses tergantung versi Android.</string>
+    <string name="permission_read_shared_storage_legitimate_use">File manager, editor media, alat backup, dan aplikasi dokumen.</string>
+
+    <string name="permission_write_shared_storage_display_name">Tulis penyimpanan bersama</string>
+    <string name="permission_write_shared_storage_explanation">Memungkinkan aplikasi menambah, mengedit, atau menghapus file di penyimpanan bersama pada versi Android lama.</string>
+    <string name="permission_write_shared_storage_privacy_impact">Aplikasi dapat mengubah file yang dapat dilihat aplikasi lain.</string>
+    <string name="permission_write_shared_storage_legitimate_use">File manager, aplikasi kamera, editor media, dan alat unduhan.</string>
+
+    <string name="permission_all_files_access_display_name">Akses semua file</string>
+    <string name="permission_all_files_access_explanation">Memungkinkan akses luas ke file di seluruh penyimpanan bersama.</string>
+    <string name="permission_all_files_access_privacy_impact">Aplikasi dapat memeriksa banyak file pribadi di luar foldernya sendiri.</string>
+    <string name="permission_all_files_access_legitimate_use">File manager penuh, utilitas backup, aplikasi antivirus, dan alat migrasi perangkat.</string>
+
+    <string name="permission_photos_and_images_display_name">Foto dan gambar</string>
+    <string name="permission_photos_and_images_explanation">Memungkinkan aplikasi membaca foto dan gambar di perangkat.</string>
+    <string name="permission_photos_and_images_privacy_impact">Foto dapat berisi wajah, lokasi, screenshot, dan dokumen pribadi.</string>
+    <string name="permission_photos_and_images_legitimate_use">Aplikasi galeri, editor foto, aplikasi sosial, dan pemindai dokumen.</string>
+
+    <string name="permission_videos_display_name">Video</string>
+    <string name="permission_videos_explanation">Memungkinkan aplikasi membaca video di perangkat.</string>
+    <string name="permission_videos_privacy_impact">Video dapat berisi adegan pribadi, suara, lokasi, atau catatan personal.</string>
+    <string name="permission_videos_legitimate_use">Aplikasi galeri, editor video, aplikasi pesan, dan utilitas backup.</string>
+
+    <string name="permission_audio_files_display_name">File audio</string>
+    <string name="permission_audio_files_explanation">Memungkinkan aplikasi membaca musik dan file audio lain di perangkat.</string>
+    <string name="permission_audio_files_privacy_impact">File audio dapat mengungkap rekaman, voice note, dan kebiasaan mendengarkan.</string>
+    <string name="permission_audio_files_legitimate_use">Pemutar musik, editor audio, aplikasi podcast, dan alat backup.</string>
+
+    <string name="permission_display_over_other_apps_display_name">Tampilkan di atas aplikasi lain</string>
+    <string name="permission_display_over_other_apps_explanation">Memungkinkan aplikasi menggambar jendela melayang atau overlay di atas aplikasi lain.</string>
+    <string name="permission_display_over_other_apps_privacy_impact">Overlay dapat menyembunyikan tombol asli, meniru layar, atau memengaruhi ketukan.</string>
+    <string name="permission_display_over_other_apps_legitimate_use">Chat head, filter layar, alat melayang, dan bantuan aksesibilitas.</string>
+
+    <string name="permission_install_unknown_apps_display_name">Instal aplikasi tak dikenal</string>
+    <string name="permission_install_unknown_apps_explanation">Memungkinkan aplikasi meminta pemasangan file APK dari luar toko aplikasi.</string>
+    <string name="permission_install_unknown_apps_privacy_impact">Ini dapat meningkatkan risiko jika aplikasi mendistribusikan file APK yang tidak tepercaya.</string>
+    <string name="permission_install_unknown_apps_legitimate_use">Toko aplikasi, installer enterprise, manajemen perangkat, dan alat pengembang.</string>
+
+    <string name="permission_bluetooth_devices_display_name">Perangkat Bluetooth</string>
+    <string name="permission_bluetooth_devices_explanation">Memungkinkan aplikasi terhubung ke perangkat Bluetooth di sekitar.</string>
+    <string name="permission_bluetooth_devices_privacy_impact">Perangkat di sekitar dapat mengungkap konteks lokasi atau aksesori pribadi.</string>
+    <string name="permission_bluetooth_devices_legitimate_use">Headphone, jam tangan, sistem mobil, perangkat smart home, dan perangkat kesehatan.</string>
+
+    <string name="permission_body_sensors_display_name">Sensor tubuh</string>
+    <string name="permission_body_sensors_explanation">Memungkinkan aplikasi membaca data sensor terkait kesehatan dari perangkat yang kompatibel.</string>
+    <string name="permission_body_sensors_privacy_impact">Data sensor dapat mengungkap pola kebugaran, kesehatan, dan biometrik.</string>
+    <string name="permission_body_sensors_legitimate_use">Aplikasi kebugaran, kesehatan, wellness, dan pendamping medis.</string>
+
+    <string name="permission_physical_activity_display_name">Aktivitas fisik</string>
+    <string name="permission_physical_activity_explanation">Memungkinkan aplikasi mendeteksi aktivitas seperti berjalan, berlari, atau mengemudi.</string>
+    <string name="permission_physical_activity_privacy_impact">Pola aktivitas dapat mengungkap rutinitas dan kebiasaan gaya hidup.</string>
+    <string name="permission_physical_activity_legitimate_use">Pelacak kebugaran, aplikasi keselamatan, peta, dan alat otomasi.</string>
+
+    <string name="permission_notifications_display_name">Notifikasi</string>
+    <string name="permission_notifications_explanation">Memungkinkan aplikasi mengirim notifikasi.</string>
+    <string name="permission_notifications_privacy_impact">Notifikasi dapat mengungkap aktivitas aplikasi di lock screen atau digunakan untuk pelacakan perhatian.</string>
+    <string name="permission_notifications_legitimate_use">Pesan, pengingat, peringatan akun, pembaruan pengiriman, dan peringatan keamanan.</string>
+
+    <string name="permission_start_after_reboot_display_name">Mulai setelah reboot</string>
+    <string name="permission_start_after_reboot_explanation">Memungkinkan aplikasi memulai pekerjaan latar belakang setelah ponsel reboot.</string>
+    <string name="permission_start_after_reboot_privacy_impact">Aplikasi dapat melanjutkan perilaku latar belakang tanpa Anda membukanya.</string>
+    <string name="permission_start_after_reboot_legitimate_use">Alarm, aplikasi keamanan, alat sinkronisasi, pelacakan kesehatan, dan utilitas perangkat.</string>
+
+    <string name="permission_foreground_service_display_name">Layanan foreground</string>
+    <string name="permission_foreground_service_explanation">Memungkinkan aplikasi menjalankan tugas panjang sambil menampilkan notifikasi yang terus aktif.</string>
+    <string name="permission_foreground_service_privacy_impact">Layanan yang berjalan lama dapat menjaga sensor, lokasi, atau aktivitas jaringan tetap aktif.</string>
+    <string name="permission_foreground_service_legitimate_use">Navigasi, pemutaran musik, pelacakan kebugaran, panggilan, dan unggahan file.</string>
+
+    <string name="permission_keep_device_awake_display_name">Jaga perangkat tetap aktif</string>
+    <string name="permission_keep_device_awake_explanation">Memungkinkan aplikasi menjaga CPU atau layar tetap aktif untuk tugas latar belakang.</string>
+    <string name="permission_keep_device_awake_privacy_impact">Ini biasanya tidak sensitif, tetapi dapat mendukung pelacakan persisten atau menguras baterai.</string>
+    <string name="permission_keep_device_awake_legitimate_use">Pemutaran musik, navigasi, unduhan, alarm, dan pelacakan kesehatan.</string>
+
+    <string name="permission_advertising_id_display_name">ID Iklan</string>
+    <string name="permission_advertising_id_explanation">Memungkinkan akses ke identifier iklan perangkat saat tersedia.</string>
+    <string name="permission_advertising_id_privacy_impact">ID iklan dapat digunakan untuk pengukuran, personalisasi iklan, atau profiling lintas aplikasi.</string>
+    <string name="permission_advertising_id_legitimate_use">Aplikasi berbasis iklan, atribusi analitik, dan pencegahan penipuan.</string>
+
+    <string name="permission_exact_alarms_display_name">Alarm presisi</string>
+    <string name="permission_exact_alarms_explanation">Memungkinkan aplikasi memicu alarm pada waktu yang tepat.</string>
+    <string name="permission_exact_alarms_privacy_impact">Alarm presisi biasanya tidak bersifat privat, tetapi dapat menjaga aplikasi tetap aktif di latar belakang.</string>
+    <string name="permission_exact_alarms_legitimate_use">Jam alarm, kalender, pengingat obat, dan peringatan yang sensitif terhadap waktu.</string>
+
+    <string name="permission_inferred_explanation">Memungkinkan aplikasi menggunakan %1$s jika fitur tersebut tersedia di perangkat ini.</string>
+    <string name="permission_inferred_privacy_impact">Tinjau apakah izin ini sesuai dengan tujuan aplikasi sebelum Anda mempercayainya.</string>
+    <string name="permission_inferred_legitimate_use">Mungkin diperlukan untuk fitur tertentu yang dideklarasikan oleh pengembang.</string>
+
+    <!-- Share options -->
+    <string name="share_options_title">Bagikan Laporan</string>
+    <string name="share_options_subtitle">Pilih cara ekspor dan bagikan laporan ini</string>
+    <string name="share_as_text">Bagikan sebagai Teks</string>
+    <string name="share_as_text_desc">Bagikan teks biasa ke aplikasi apa pun</string>
+    <string name="share_as_txt">Ekspor sebagai File TXT</string>
+    <string name="share_as_txt_desc">Bagikan file laporan .txt terformat</string>
+    <string name="share_as_pdf">Ekspor sebagai PDF</string>
+    <string name="share_as_pdf_desc">Bagikan laporan PDF terformat</string>
+    <string name="share_as_markdown">Ekspor sebagai Markdown</string>
+    <string name="share_as_markdown_desc">Bagikan file laporan .md</string>
+    <string name="chooser_share_txt">Bagikan laporan TXT</string>
+    <string name="chooser_share_pdf">Bagikan laporan PDF</string>
+    <string name="chooser_share_markdown">Bagikan laporan Markdown</string>
+    <string name="toast_share_failed">Gagal membuat file laporan.</string>
+</resources>

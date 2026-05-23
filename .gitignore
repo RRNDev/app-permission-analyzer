@@ -1,0 +1,40 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Android build outputs
+/build/
+/app/debug/
+/app/release/
+/app/free/build/
+/app/free/release/
+/app/free/debug/
+/app/pro/build/
+/app/pro/release/
+/app/pro/debug/
+
+# APK / AAB
+*.apk
+*.aab
+
+# Mapping / obfuscation output
+mapping.txt
+proguard.map
+**/BUNDLE-METADATA/
+**/outputs/
+
+.vscode
+.idea
+.kotlin

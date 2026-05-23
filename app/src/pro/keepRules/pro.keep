@@ -1,0 +1,4 @@
+# Pro flavor additions.
+#
+# No extra rules are needed. The pro build uses only the shared minimal release
+# rules from app/proguard-rules.pro.
